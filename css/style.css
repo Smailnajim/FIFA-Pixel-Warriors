@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.field {
+    width: 892px;
+    background-repeat: no-repeat;
+    background-image: url('../bazare/stadium_background.webp');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.field .Defense-L, .field .Defense-R{
+    transform: translateY(-50%);
+}
+
+.field div {
+    display: flex;
+    justify-content: space-evenly;
+}
+.field  .Middle {
+    position: relative;
+    top: -20px;
+
+}
+
+.field button {
+    background: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    transition: 0.8s;
+}
+
+
+.field button:hover {
+    box-shadow: 0px 0px 30px 8px green;
+    background: rgb(0, 0, 0, 0.2);
+}
+
+.player .player-cart {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    border: 2px rgb(255, 255, 255, 0.3) solid;
+    border-radius: 16px;
+    padding: 5px;
+    background: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.player .player-cart .player-NEL {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player .player-cart .player-img img{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.player .player-cart .player-img div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player .player-cart .player-img div img {
+    width: 25px;
+}
+
+.player .player-cart .player-NEL h5 {
+    margin-bottom: 20px;
+}
+
+.player .player-cart .player-NEL button {
+    background: gray;
+    border: none;
+    border-radius: 8px;
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.player .player-cart .player-NEL .Level {
+    display: flex;
+    gap: 8px;
+}
+
+
+
