@@ -21,7 +21,7 @@ body {
     justify-content: space-around;
 }
 
-.field .Defense-L, .field .Defense-R{
+.field #Defense-L, .field #Defense-R{
     transform: translateY(-50%);
 }
 
@@ -50,11 +50,33 @@ body {
     box-shadow: 0px 0px 30px 8px green;
     background: rgb(0, 0, 0, 0.2);
 }
-
+.player::-webkit-scrollbar {
+    width: 10px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 .player .player-cart {
     display: flex;
     gap: 10px;
     margin-top: 15px;
+    width: 170px;
     border: 2px rgb(255, 255, 255, 0.3) solid;
     border-radius: 16px;
     padding: 5px;
@@ -82,11 +104,11 @@ body {
     width: 25px;
 }
 
-.player .player-cart .player-NEL h5 {
+h5 {
     margin-bottom: 20px;
 }
 
-.player .player-cart .player-NEL button {
+#addPlyerInto {
     background: gray;
     border: none;
     border-radius: 8px;
@@ -94,10 +116,10 @@ body {
     margin-top: 5px;
 }
 
-.player .player-cart .player-NEL .Level {
+/* .player .player-cart .player-NEL .Level {
     display: flex;
     gap: 8px;
-}
+} */
 
 
 
