@@ -13,15 +13,17 @@ body {
 }
 
 .field {
-    width: 892px;
+    /* width: 892px; */
+    width: 62%;
     background-repeat: no-repeat;
     background-image: url('../bazare/stadium_background.webp');
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.field #Defense-L, .field #Defense-R{
+#Defense-L, #Defense-R{
     transform: translateY(-50%);
 }
 
@@ -29,10 +31,10 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
 .field  .Middle {
     position: relative;
     top: -20px;
-
 }
 
 .field button {
@@ -50,28 +52,35 @@ body {
     box-shadow: 0px 0px 30px 8px green;
     background: rgb(0, 0, 0, 0.2);
 }
-.player::-webkit-scrollbar {
+/* .player::-webkit-scrollbar {
     width: 10px;
-}
+} */
 /* width */
-::-webkit-scrollbar {
+/* .player::-webkit-scrollbar {
     width: 10px;
-  }
-  
+} */
+
   /* Track */
-  ::-webkit-scrollbar-track {
+/* .player::-webkit-scrollbar-track {
     background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+} */
+
+/* Handle */
+/* .player::-webkit-scrollbar-thumb {
+background: #888; 
+} */
+
+/* Handle on hover */
+/* .player::-webkit-scrollbar-thumb:hover {
+background: #555; 
+} */
+
+.player {
+    overflow: scroll;
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+}
+
 .player .player-cart {
     display: flex;
     gap: 10px;
@@ -116,10 +125,43 @@ h5 {
     margin-top: 5px;
 }
 
+
+.field2 {
+    position: absolute;
+    left: 15%;
+    width: 62%;
+    height: 100dvh;
+    /* background-color: aqua; */
+    border: solid ;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field2 div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.field2  .Middle {
+    position: relative;
+    top: -20px;
+}
+
+.field2 .imgeCss {
+    width: 15%;
+}
+
+#cDefense-L, #cDefense-R, #cGK{
+    transform: translateY(-25%);
+}
+
+/* #cAttack-R ,#cDefense-L, #cDefense-R, #cGK{
+    visibility: visible;
+} */
 /* .player .player-cart .player-NEL .Level {
     display: flex;
     gap: 8px;
+
 } */
-
-
-

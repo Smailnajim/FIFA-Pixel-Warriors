@@ -65,6 +65,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
 
     const LB = document.getElementById('Defense-L');
     const CB = document.getElementById('Defense-M');
+    const CB2 = document.getElementById('Defense-M2');
     const RB = document.getElementById('Defense-R');
 
     const LM = document.getElementById('Middle-L');
@@ -116,7 +117,19 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
         }while (obj.players[i].name != "Gianluigi Donnarumma");
     });
     
-    
+    CB2.addEventListener("click", ()=>{
+        
+        i = -1;
+        removechildrens();
+        do {
+            i++;
+            const Posis = obj.players[i].position; 
+            if (Posis == "CB" || Posis == "CDB")
+            divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);
+            
+        }while (obj.players[i].name != "Gianluigi Donnarumma");
+    });
+
     RB.addEventListener("click", ()=>{
         i = -1;
         removechildrens();
