@@ -125,7 +125,6 @@ h5 {
     margin-top: 5px;
 }
 
-
 .field2 {
     position: absolute;
     left: 15%;
@@ -144,6 +143,10 @@ h5 {
     justify-content: space-evenly;
 }
 
+#cDefense-L {
+    visibility: visible;
+}
+
 .field2  .Middle {
     position: relative;
     top: -20px;
@@ -153,9 +156,196 @@ h5 {
     width: 15%;
 }
 
+/* .sssI {
+    width: 141px;
+} */
+
+/* .sssI img {
+    width: 100%;
+} */
+
 #cDefense-L, #cDefense-R, #cGK{
     transform: translateY(-25%);
 }
+
+.placeAttackM {
+    /* background-image: url('../bazare/badge_total_rush.webp'); */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:4%;
+    left: 50.5%;
+    transform: translateX(-50%);
+}
+
+.placeAttackL {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:4%;
+    left: 21.5%;
+    transform: translateX(-50%);
+}
+
+.placeAttackR {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:4%;
+    right: 11%;
+    transform: translateX(-50%);
+}
+
+.placeMiddleR {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:28%;
+    right: 11%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeMiddleM {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:28%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 100;
+}
+
+.placeMiddleL {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:28%;
+    left: 21.5%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseL {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:50.5%;
+    left: 15.5%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseM {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 57%;
+    left: 39%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseM2 {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:57%;
+    left: 62%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseR {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:51%;
+    right: 5%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.GK {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:78%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 100;
+}
+/* .placeAttackM .nameJoure, .placeAttackL */ .nameJoure{
+    width: fit-content;
+    text-align: center;
+    color:rgb(253, 253, 4);
+}
+
+.placeAttackM img, .placeAttackL img, .placeAttackR img, .placeMiddleR img, .placeMiddleM img, .placeMiddleL img, .placeDefenseL img, .placeDefenseM img, .placeDefenseM2 img, .placeDefenseR img, .GK img {
+    width: 65%;
+    margin-bottom: 5px;
+}
+
+/* .placeAttackM .LevelJoure, .placeAttackL */ .LevelJoure{
+    text-align: center;
+    font-size: 70%;
+    /* font-size: 13px; */
+    color: rgb(200, 240, 140);
+}
+
+.posi {
+    position: absolute;
+    left: -10%;
+    top: 12px;
+}
+
+.LG {
+    position: absolute;
+    left: -10%;
+    top: 25px;
+}
+
+.GK 
+placeDefenseR placeDefenseM placeDefenseM2 placeDefenseL
+placeMiddleL placeMiddleM .placeMiddleR
+placeAttackR placeAttackM placeAttackL 
+
+/* #imagePe, #imagePe2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50.5%;
+    transform: translateX(-50%);
+}
+#imagePe{
+    top:30%;
+}
+#imagePe2 {
+    top:45%;
+} */
 
 /* #cAttack-R ,#cDefense-L, #cDefense-R, #cGK{
     visibility: visible;
