@@ -1,10 +1,13 @@
+let AttackTab = [];//data of player for Chimie 
+let MiddlekTab = [];
+let DefenseTab = [];
+let Goolkiper;
+
 let WhereGo;
 
 const removechildrens = function(){
     const parentt = document.querySelector(".player");
     while (parentt.firstChild) {
-        // console.log(parentt.firstChild);
-        // console.log(parentt.firstChild);
         parentt.removeChild(parentt.firstChild);
     }
 };
@@ -38,7 +41,6 @@ const replacePlayerToField = function(pac, sho, pas, dri, def, phy, rit, imgJour
 
     // value into elements
     h4$dom1.innerHTML = `${isme}`;
-    // console.log(`tis is ${isme}`);//sddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
     p$dom2.innerHTML = `${posi}`;
     p$dom3.innerHTML = `${rit}`;
     img$dom4.src = imgJoure;
@@ -50,7 +52,6 @@ const replacePlayerToField = function(pac, sho, pas, dri, def, phy, rit, imgJour
 
     //add classes
     div$parent.classList.add(WhereGo);
-    console.log(WhereGo);
     h4$dom1.classList.add("nameJoure");
     p$dom2.classList.add("posi");
     p$dom3.classList.add("LG");
@@ -58,9 +59,6 @@ const replacePlayerToField = function(pac, sho, pas, dri, def, phy, rit, imgJour
     p$dom6.classList.add("LevelJoure");
     p$dom7.classList.add("LevelJoure");
     p$dom8.classList.add("LevelJoure");
-
-
-
 
 
     //append into
@@ -79,49 +77,63 @@ const replacePlayerToField = function(pac, sho, pas, dri, def, phy, rit, imgJour
 
     switch(WhereGo) {
         case "placeAttackM":
+            AttackTab [1] = `${isme}`; //take name player with his position for Chimie
             visiblAM.style.visibility = 'visible';
             break;
 
         case "placeAttackL":
+            AttackTab [0] = `${isme}`;
             visiblAL.style.visibility = 'visible';
             break;
 
         case "placeAttackR":
+            AttackTab [2] = `${isme}`;
             visiblAR.style.visibility = 'visible';
             break;
 
         case "placeMiddleL":
+            MiddlekTab [0] = `${isme}`;
             visiblML.style.visibility = 'visible';
             break;
 
         case "placeMiddleR":
+            MiddlekTab [2] = `${isme}`;
             visiblMR.style.visibility = 'visible';
             break;
 
         case "placeMiddleM":
+            MiddlekTab [1] = `${isme}`;
             visiblMM.style.visibility = 'visible';
             break;
 
         case "placeDefenseM2":
+            DefenseTab [2] = `${isme}`;
             visiblDM2.style.visibility = 'visible';
             break;
 
         case "placeDefenseL":
+            DefenseTab [0] = `${isme}`;
             visiblDL.style.visibility = 'visible';
             break;
 
         case "placeDefenseR":
+            DefenseTab [3] = `${isme}`;
             visiblDR.style.visibility = 'visible';
             break;
 
         case "placeDefenseM":
+            DefenseTab [1] = `${isme}`;
             visiblDM.style.visibility = 'visible';
             break;
 
         case "GK":
+            Goolkiper = `${isme}`;
             visiblGk.style.visibility = 'visible';
     }
+}
 
+//calcel Chimie 
+const calcelChimie =  () => {
 
 }
 
@@ -162,10 +174,8 @@ const divIn$sectionPlyers = function(pac, sho, pas, dri, def, phy, rit, imgJoure
     button$enterNel.setAttribute('id', 'addPlyerInto');
 
     //button eventListener
-    
-    button$enterNel.addEventListener("click", ()=>{             //    -------------------------------------><--------
-        console.log(pac);
-        console.log(WhereGo);
+    button$enterNel.addEventListener("click", ()=>{
+        
         replacePlayerToField(pac, sho, pas, dri, def, phy, rit, imgJoure, imgMontakhb, imgnadi, isme, posi);//, WhereGo
 
     });
@@ -184,7 +194,6 @@ const divIn$sectionPlyers = function(pac, sho, pas, dri, def, phy, rit, imgJoure
     div$Cart.appendChild(div$side_nel);
     Section$Player.appendChild(div$Cart);
 };
-// console
 
 fetch("js/main.json").then(response => response.json()).then(obj => {//start fetch
     const LB = document.getElementById('Defense-L');
@@ -209,7 +218,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
             i++;
             const Posis = obj.players[i].position; 
             
-            if (Posis == "GK")  
+            if (Posis == "GK" && obj.players[i].name != Goolkiper)  
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical, obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "GK"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
@@ -223,7 +232,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
             i++;
             const Posis = obj.players[i].position;
 
-            if (Posis == "LB" || Posis == "LCB")
+            if (Posis == "LB" )
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical, obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeDefenseL"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
@@ -238,7 +247,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
         do {
             i++;
             const Posis = obj.players[i].position; 
-            if (Posis == "CB" || Posis == "CDB")
+            if (Posis == "CB" && obj.players[i].name != DefenseTab [2])
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical,  obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeDefenseM"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
@@ -252,7 +261,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
         do {
             i++;
             const Posis = obj.players[i].position; 
-            if (Posis == "CB" || Posis == "CDB")
+            if (Posis == "CB" && obj.players[i].name != DefenseTab [1])
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical,  obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeDefenseM2"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
@@ -265,13 +274,12 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
         do {
             i++;
             const Posis = obj.players[i].position; 
-            if (Posis == "RB" || Posis == "RWB")
+            if (Posis == "RB" )
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical,  obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeDefenseR"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
     });
 
-    
     LM.addEventListener("click", ()=>{
         i = -1;
         removechildrens();
@@ -280,13 +288,12 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
             i++;
             const Posis = obj.players[i].position; 
             
-            if (Posis == "LM" || Posis == "LW")
+            if (Posis == "CM" && obj.players[i].name != MiddlekTab [1] && obj.players[i].name != MiddlekTab [2])
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical,  obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeMiddleL"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
     });
 
-    
     CM.addEventListener("click", ()=>{
         i = -1;
         removechildrens();
@@ -295,7 +302,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
             i++;
             const Posis = obj.players[i].position; 
             
-            if (Posis == "CM" || Posis == "CDM")
+            if ((Posis == "CM" || Posis == "CDM") && obj.players[i].name != MiddlekTab [0] && obj.players[i].name != MiddlekTab [2])
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical,  obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeMiddleM"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
@@ -310,7 +317,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
             i++;
             const Posis = obj.players[i].position; 
             
-            if (Posis == "RM" || Posis == "RW")
+            if (Posis == "CM" && obj.players[i].name != MiddlekTab [0] && obj.players[i].name != MiddlekTab [1])
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical,  obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeMiddleR"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");
@@ -325,7 +332,7 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
             i++;
             const Posis = obj.players[i].position; 
             
-            if (Posis == "CF" || Posis == "LW")
+            if ( Posis == "LW")
             divIn$sectionPlyers (obj.players[i].passing, obj.players[i].shooting, obj.players[i].pace, obj.players[i].dribbling, obj.players[i].defending, obj.players[i].physical,  obj.players[i].rating, obj.players[i].photo, obj.players[i].flag, obj.players[i].logo, obj.players[i].name, obj.players[i].position);//, "placeAttackL"
             
         }while (obj.players[i].name != "Gianluigi Donnarumma");

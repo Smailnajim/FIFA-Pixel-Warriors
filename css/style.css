@@ -13,7 +13,6 @@ body {
 }
 
 .field {
-    /* width: 892px; */
     width: 62%;
     height: 100dvh;
     background-repeat: no-repeat;
@@ -48,33 +47,10 @@ body {
     transition: 0.8s;
 }
 
-
 .field button:hover {
     box-shadow: 0px 0px 30px 8px green;
     background: rgb(0, 0, 0, 0.2);
 }
-/* .player::-webkit-scrollbar {
-    width: 10px;
-} */
-/* width */
-/* .player::-webkit-scrollbar {
-    width: 10px;
-} */
-
-  /* Track */
-/* .player::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-} */
-
-/* Handle */
-/* .player::-webkit-scrollbar-thumb {
-background: #888; 
-} */
-
-/* Handle on hover */
-/* .player::-webkit-scrollbar-thumb:hover {
-background: #555; 
-} */
 
 .player {
     overflow: scroll;
@@ -125,10 +101,6 @@ h5 {
     border-radius: 8px;
     padding: 3px;
     margin-top: 5px;
-}
-
-.RigthSide {
-    /* width: 62%; */
 }
 
 .Chimie {
@@ -203,14 +175,6 @@ h5 {
     width: 141px;
     height: 196px;
 }
-
-/* .sssI {
-    width: 141px;
-} */
-
-/* .sssI img {
-    width: 100%;
-} */
 
 #cDefense-L, #cDefense-R, #cGK{
     transform: translateY(-27%);
@@ -345,7 +309,7 @@ h5 {
     transform: translateX(50%);
     z-index: 100;
 }
-/* .placeAttackM .nameJoure, .placeAttackL */ .nameJoure{
+.nameJoure{
     width: fit-content;
     text-align: center;
     color:rgb(253, 253, 4);
@@ -356,10 +320,9 @@ h5 {
     margin-bottom: 5px;
 }
 
-/* .placeAttackM .LevelJoure, .placeAttackL */ .LevelJoure{
+.LevelJoure{
     text-align: center;
     font-size: 70%;
-    /* font-size: 13px; */
     color: rgb(200, 240, 140);
 }
 
@@ -374,32 +337,3 @@ h5 {
     left: -10%;
     top: 25px;
 }
-
-.GK 
-placeDefenseR placeDefenseM placeDefenseM2 placeDefenseL
-placeMiddleL placeMiddleM .placeMiddleR
-placeAttackR placeAttackM placeAttackL 
-
-/* #imagePe, #imagePe2 {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: absolute;
-    left: 50.5%;
-    transform: translateX(-50%);
-}
-#imagePe{
-    top:30%;
-}
-#imagePe2 {
-    top:45%;
-} */
-
-/* #cAttack-R ,#cDefense-L, #cDefense-R, #cGK{
-    visibility: visible;
-} */
-/* .player .player-cart .player-NEL .Level {
-    display: flex;
-    gap: 8px;
-
-} */
