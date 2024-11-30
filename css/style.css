@@ -15,6 +15,7 @@ body {
 .field {
     /* width: 892px; */
     width: 62%;
+    height: 100dvh;
     background-repeat: no-repeat;
     background-image: url('../bazare/stadium_background.webp');
     background-position: center;
@@ -110,7 +111,8 @@ background: #555;
 }
 
 .player .player-cart .player-img div img {
-    width: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 h5 {
@@ -125,12 +127,25 @@ h5 {
     margin-top: 5px;
 }
 
+.RigthSide {
+    /* width: 62%; */
+}
+
+.Chimie {
+    margin: 15px 0;
+    width: 170px;
+    border: 2px rgb(255, 255, 255, 0.3) solid;
+    border-radius: 16px;
+    padding: 5px;
+    background: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+
 .field2 {
     position: absolute;
     left: 15%;
     width: 62%;
     height: 100dvh;
-    /* background-color: aqua; */
     border: solid ;
     visibility: hidden;
     display: flex;
@@ -142,18 +157,51 @@ h5 {
     display: flex;
     justify-content: space-evenly;
 }
-
-#cDefense-L {
-    visibility: visible;
+#cGK {
+    visibility: hidden;
 }
 
+#cDefense-L {
+    visibility: hidden;
+}
+#cDefense-R {
+    visibility: hidden;
+}
+
+#cDefense-M {
+    visibility: hidden;
+}
+
+#cDefense-M2 {
+    visibility: hidden;
+}
+
+#cMiddle-L {
+    visibility: hidden;
+}
+#cMiddle-R {
+    visibility: hidden;
+}
+#cMiddle-M{
+    visibility: hidden;
+}
+#cAttack-L{
+    visibility: hidden;
+}
+#cAttack-R{
+    visibility: hidden;
+}
+#cAttack-M{
+    visibility: hidden;
+}
 .field2  .Middle {
     position: relative;
     top: -20px;
 }
 
 .field2 .imgeCss {
-    width: 15%;
+    width: 141px;
+    height: 196px;
 }
 
 /* .sssI {
@@ -165,7 +213,7 @@ h5 {
 } */
 
 #cDefense-L, #cDefense-R, #cGK{
-    transform: translateY(-25%);
+    transform: translateY(-27%);
 }
 
 .placeAttackM {
