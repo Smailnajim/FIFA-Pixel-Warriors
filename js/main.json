@@ -14,7 +14,8 @@
             "passing": 91,
             "dribbling": 95,
             "defending": 35,
-            "physical": 65
+            "physical": 65,
+            "league": "MLS"
         },
         {
             "name": "Cristiano Ronaldo",
@@ -30,7 +31,8 @@
             "passing": 82,
             "dribbling": 87,
             "defending": 34,
-            "physical": 77
+            "physical": 77,
+            "league": "SA"
         },
         {
             "name": "Kevin De Bruyne",
@@ -46,7 +48,8 @@
             "passing": 93,
             "dribbling": 88,
             "defending": 64,
-            "physical": 78
+            "physical": 78,
+            "league": "EPL"
         },
         {
             "name": "Kylian Mbappé",
@@ -62,7 +65,8 @@
             "passing": 80,
             "dribbling": 92,
             "defending": 39,
-            "physical": 77
+            "physical": 77,
+            "league": "LEGA"
         },
         {
             "name": "Virgil van Dijk",
@@ -78,7 +82,8 @@
             "passing": 70,
             "dribbling": 72,
             "defending": 92,
-            "physical": 86
+            "physical": 86,
+            "league": "EPL"
         },
         {
             "name": "Antonio Rudiger",
@@ -94,7 +99,8 @@
             "passing": 73,
             "dribbling": 70,
             "defending": 86,
-            "physical": 86
+            "physical": 86,
+            "league": "LEGA"
         },
         {
             "name": "Neymar Jr",
@@ -110,7 +116,8 @@
             "passing": 86,
             "dribbling": 94,
             "defending": 37,
-            "physical": 61
+            "physical": 61,
+            "league": "SA"
         },
         {
             "name": "Mohamed Salah",
@@ -126,7 +133,8 @@
             "passing": 81,
             "dribbling": 90,
             "defending": 45,
-            "physical": 75
+            "physical": 75,
+            "league": "EPL"
         },
         {
             "name": "Joshua Kimmich",
@@ -142,7 +150,8 @@
             "passing": 88,
             "dribbling": 84,
             "defending": 84,
-            "physical": 81
+            "physical": 81,
+            "league": "Germany"
         },
         {
             "name": "Jan Oblak",
@@ -158,7 +167,8 @@
             "passing": 78,
             "dribbling": 92,
             "defending": 50,
-            "physical": 88
+            "physical": 88,
+            "league": "LEGA"
         },
         {
             "name": "Luka Modrić",
@@ -174,7 +184,8 @@
             "passing": 89,
             "dribbling": 90,
             "defending": 72,
-            "physical": 65
+            "physical": 65,
+            "league": "LEGA"
         },
         {
             "name": "Vinicius Junior",
@@ -190,7 +201,8 @@
             "passing": 85,
             "dribbling": 94,
             "defending": 39,
-            "physical": 61
+            "physical": 61,
+            "league": "LEGA"
         },
         {
             "name": "Brahim Diáz",
@@ -206,7 +218,8 @@
             "passing": 78,
             "dribbling": 85,
             "defending": 31,
-            "physical": 56
+            "physical": 56,
+            "league": "LEGA"
         },
         {
             "name": "Karim Benzema",
@@ -222,7 +235,8 @@
             "passing": 83,
             "dribbling": 88,
             "defending": 40,
-            "physical": 78
+            "physical": 78,
+            "league": "SA"
         },
         {
             "name": "Erling Haaland",
@@ -238,7 +252,8 @@
             "passing": 65,
             "dribbling": 80,
             "defending": 45,
-            "physical": 88
+            "physical": 88,
+            "league": "EPL"
         },
         {
             "name": "N'Golo Kanté",
@@ -254,7 +269,8 @@
             "passing": 75,
             "dribbling": 82,
             "defending": 88,
-            "physical": 82
+            "physical": 82,
+            "league": "SA"
         },
         {
             "name": "Alphonso Davies",
@@ -270,7 +286,8 @@
             "passing": 77,
             "dribbling": 82,
             "defending": 76,
-            "physical": 77
+            "physical": 77,
+            "league": "Germany"
         },
         {
             "name": "Yassine Bounou",
@@ -286,7 +303,8 @@
             "passing": 77,
             "dribbling": 86,
             "defending": 38,
-            "physical": 83
+            "physical": 83,
+            "league": "SA"
         },
         {
             "name": "Bruno Fernandes",
@@ -302,7 +320,8 @@
             "passing": 89,
             "dribbling": 84,
             "defending": 69,
-            "physical": 77
+            "physical": 77,
+            "league": "EPL"
         },
         {
             "name": "Jadon Sancho",
@@ -318,7 +337,8 @@
             "passing": 78,
             "dribbling": 88,
             "defending": 34,
-            "physical": 63
+            "physical": 63,
+            "league": "EPL"
         },
         {
             "name": "Trent Alexander-Arnold",
@@ -333,7 +353,8 @@
             "passing": 89,
             "dribbling": 80,
             "defending": 79,
-            "physical": 71
+            "physical": 71,
+            "league": "EPL"
         },
         {
             "name": "Achraf Hakimi",
@@ -349,7 +370,8 @@
             "passing": 80,
             "dribbling": 80,
             "defending": 75,
-            "physical": 78
+            "physical": 78,
+            "league": "FR"
         },
         {
             "name": "Youssef En-Nesyri",
@@ -365,7 +387,8 @@
             "passing": 63,
             "dribbling": 77,
             "defending": 36,
-            "physical": 80
+            "physical": 80,
+            "league": "Trki"
         },
         {
             "name": "Noussair Mazraoui",
@@ -381,7 +404,8 @@
             "passing": 77,
             "dribbling": 83,
             "defending": 77,
-            "physical": 71
+            "physical": 71,
+            "league": "EPL"
         },
         {
             "name": "Ismael Saibari",
@@ -397,7 +421,8 @@
             "passing": 80,
             "dribbling": 86,
             "defending": 55,
-            "physical": 84
+            "physical": 84,
+            "league": "Erdi"
         },
         {
             "name": "Gianluigi Donnarumma",
@@ -413,7 +438,8 @@
             "passing": 75,
             "dribbling": 90,
             "defending": 50,
-            "physical": 85
+            "physical": 85,
+            "league": "FR"
         }
     ]
 }

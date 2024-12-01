@@ -1,3 +1,8 @@
+:root {
+    --varGoUp: 0;
+    --varReste: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -52,10 +57,14 @@ body {
     background: rgb(0, 0, 0, 0.2);
 }
 
-.player {
+.RigthSide {
     overflow: scroll;
     scrollbar-color: white black;
     scrollbar-width: thin;
+}
+
+.player {
+    margin-top: 10vh;
 }
 
 .player .player-cart {
@@ -111,6 +120,28 @@ h5 {
     padding: 5px;
     background: rgb(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
+    /* position: fixed; */
+    /* z-index: 100; */
+    /* box-shadow: 0  -30px 5px 4px black; */
+}
+/* box-shadow: 0 0 30px 5px rgb(125, 6, 6); */
+
+.Chimie-parent {
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.goUp {
+    flex-grow: var(--varGoUp);
+    background-color: rgb(222, 222, 25);
+    border-radius: 7px;
+    padding: 0 7px;
+    color: cadetblue;
+}
+
+.reste {
+    flex-grow: var(--varReste);
 }
 
 .field2 {
@@ -129,6 +160,7 @@ h5 {
     display: flex;
     justify-content: space-evenly;
 }
+
 #cGK {
     visibility: hidden;
 }
