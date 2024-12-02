@@ -17,6 +17,35 @@ body {
     justify-content: space-evenly;
 }
 
+.Left {
+    width: 5%;
+}
+
+.goField{
+    margin-top: 30%;
+    width: 90%;
+    padding: 8%;
+    border-bottom: solid white;
+    border-top: solid white;
+    text-align: center;
+}
+
+.AllPlyer {
+    width: 90%;
+    padding: 8%;
+    border-bottom: solid white;
+    text-align: center;
+}
+
+.AllPlyer:hover, .goField:hover {
+    cursor: grabbing;
+    color: rgb(244, 244, 219);
+}
+
+.field {
+    visibility: visible;
+}
+
 .field {
     width: 62%;
     height: 100dvh;
@@ -77,6 +106,7 @@ body {
     padding: 5px;
     background: rgb(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
+    visibility: visible;
 }
 
 .player .player-cart .player-NEL {
@@ -131,6 +161,7 @@ h5 {
     width: 100%;
     margin-top: 3%;
 }
+
 
 .goUp {
     flex-grow: var(--varGoUp);
@@ -341,6 +372,11 @@ h5 {
     transform: translateX(50%);
     z-index: 100;
 }
+/* 
+.GK, .placeDefenseR, .placeDefenseM2, .placeDefenseM, .placeDefenseL, .placeMiddleL, .placeMiddleM, .placeAttackR, .placeAttackL, .placeAttackM {
+    visibility: visible;
+} */
+
 .nameJoure{
     width: fit-content;
     text-align: center;

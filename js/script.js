@@ -6,6 +6,98 @@ let arryTo = [];
 let WhereGo;
 let playerInField = 0;
 
+const visiblGk = document.getElementById("cGK");
+const visiblDL = document.getElementById("cDefense-L");
+const visiblDR = document.getElementById("cDefense-R");
+const visiblDM = document.getElementById("cDefense-M");
+const visiblDM2 = document.getElementById("cDefense-M2");
+const visiblMR = document.getElementById("cMiddle-R");
+const visiblMM = document.getElementById("cMiddle-M");
+const visiblML = document.getElementById("cMiddle-L");
+const visiblAR = document.getElementById("cAttack-R");
+const visiblAM = document.getElementById("cAttack-M");
+const visiblAL = document.getElementById("cAttack-L");
+
+function visiHiden (val) {
+    //attack
+    if(AttackTab[0])
+        visiblAL.style.visibility = val;
+
+    if(AttackTab[1])
+        visiblAM.style.visibility = val;
+
+    if(AttackTab[2])
+        visiblAR.style.visibility = val;
+
+    //middle
+    if(MiddlekTab[0])
+        visiblML.style.visibility = val;
+
+    if(MiddlekTab[1])
+        visiblMM.style.visibility = val;
+
+    if(MiddlekTab[2])
+        visiblMR.style.visibility = val;
+
+    //Defense
+    if(DefenseTab[0])
+        visiblDL.style.visibility = val;
+
+    if(DefenseTab[1])
+        visiblDM.style.visibility = val;
+
+    if(DefenseTab[2])
+        visiblDM2.style.visibility = val;
+
+    if(DefenseTab[3])
+        visiblDR.style.visibility = val;
+
+    //gk
+    if(Goolkiper)
+        visiblGk.style.visibility = val;
+
+    //val to cart
+    let arryCarts = document.querySelectorAll(".player-cart");
+    console.log(arryCarts);
+
+    // let k;
+    for (let k = 0; k < arryCarts.length; k++){
+        console.log(arryCarts[k]);
+        arryCarts[k].style.visibility = val;
+    }
+
+    //
+    document.querySelector(".placeAttackM").style.visibility = val;
+    document.querySelector(".placeAttackL").style.visibility = val;
+    document.querySelector(".placeAttackR").style.visibility = val;
+    document.querySelector(".placeMiddleM").style.visibility = val;
+    document.querySelector(".placeMiddleL").style.visibility = val;
+    document.querySelector(".placeMiddleR").style.visibility = val;
+    document.querySelector(".placeDefenseL").style.visibility = val;
+    document.querySelector(".placeDefenseM").style.visibility = val;
+    document.querySelector(".placeDefenseM2").style.visibility = val;
+    document.querySelector(".placeDefenseR").style.visibility = val;
+    document.querySelector(".GK").style.visibility = val;
+}
+
+const OpenField = document.querySelector(".goField");//change place to field
+
+const Field = document.querySelector(".field");
+const RigthSide = document.querySelector(".RigthSide");
+
+OpenField.onclick = ()=>{
+    Field.style.visibility = "visible";//hidden
+    visiHiden ("visible");
+    RigthSide.style.visibility = "visible";
+}
+
+const CloseField = document.querySelector(".AllPlyer");//change place to plyer 
+
+CloseField.onclick = ()=>{
+    Field.style.visibility = "hidden";//visible
+    visiHiden ("hidden");
+    RigthSide.style.visibility = "hidden";
+}
 
 fetch("js/main.json").then(response => response.json()).then(obj => {//start fetch
     const LB = document.getElementById('Defense-L');
@@ -265,14 +357,10 @@ fetch("js/main.json").then(response => response.json()).then(obj => {//start fet
         arryTo = [DefenseTab [0], DefenseTab [1], DefenseTab [2], DefenseTab [3], Goolkiper]
         Chimistry += calcelChimie (arryTo, Goolkiper,5);
 
-        // console.log("nhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh ",Chimistry);
 
         Chimistry /= 11;
         Chimistry *= 5;
         RestChimistry = 100 - Chimistry;
-        // console.log("nhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh 2",Chimistry," fg ",RestChimistry);
-        // console.log("hnaaaaaaaaaaaaa ",Goolkiper);
-        //change value
 
         document.querySelector(".porsontag").innerHTML = Chimistry;
         document.documentElement.style.setProperty("--varGoUp", Chimistry);
@@ -291,17 +379,6 @@ const removechildrens = function(){
 
 //creat div camla                    |T a 9 t e   l a 3 i b             |i m e g e s                    |...
 const replacePlayerToField = function(pac, sho, pas, dri, def, phy, rit, imgJoure, imgMontakhb, imgnadi, isme, posi){
-    const visiblGk = document.getElementById("cGK");
-    const visiblDL = document.getElementById("cDefense-L");
-    const visiblDR = document.getElementById("cDefense-R");
-    const visiblDM = document.getElementById("cDefense-M");
-    const visiblDM2 = document.getElementById("cDefense-M2");
-    const visiblMR = document.getElementById("cMiddle-R");
-    const visiblMM = document.getElementById("cMiddle-M");
-    const visiblML = document.getElementById("cMiddle-L");
-    const visiblAR = document.getElementById("cAttack-R");
-    const visiblAM = document.getElementById("cAttack-M");
-    const visiblAL = document.getElementById("cAttack-L");
 
     const div$parent = document.createElement('div');
     const h4$dom1 = document.createElement('h4');
@@ -482,4 +559,4 @@ const divIn$sectionPlyers = function(pac, sho, pas, dri, def, phy, rit, imgJoure
     div$Cart.appendChild(div$side_nel);
     Section$Player.appendChild(div$Cart);
 };
-});
+});//fine fiche
