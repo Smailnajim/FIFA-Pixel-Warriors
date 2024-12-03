@@ -35,6 +35,7 @@ body {
     padding: 8%;
     border-bottom: solid white;
     text-align: center;
+
 }
 
 .AllPlyer:hover, .goField:hover {
@@ -55,6 +56,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    visibility: visible;
 }
 
 #Defense-L, #Defense-R{
@@ -90,6 +92,7 @@ body {
     overflow: scroll;
     scrollbar-color: white black;
     scrollbar-width: thin;
+    visibility: visible;
 }
 
 .player {
@@ -404,4 +407,67 @@ h5 {
     position: absolute;
     left: -10%;
     top: 25px;
+}
+
+.AllPlyerBehinde {
+    margin-top: 1%;
+    position: absolute;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.navbar input{
+    outline: none;
+    padding: 7px 20px;
+    color: black;
+    border-radius: 16px;
+}
+
+.searchItem i{
+    color: gray;
+    position: absolute;
+    left: 38%;
+    transform: translateY(50%);
+}
+
+.iconNav {
+    transform: translateY(25%);
+    transform: translateX(50%);
+}
+
+#showAll {
+    padding: 5px;
+    text-align: center;
+}
+
+.placePlyerHere {
+    margin-top: 20px;
+    width: 80%;
+    height: 80dvh;
+    background-color: firebrick;
+    overflow: auto;
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+}
+
+.zonPlyer {
+    width: 100%;
+    margin: 1%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.imNm img{
+    width: 80px;
 }
